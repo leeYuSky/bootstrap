@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!--加载spring上下文,也可在web.xml配置contextConfigLocation-->
+    <!--<import resource="classpath:spring-mybatis.xml"/>-->
+
+    <context:component-scan base-package="cn.tju.scs.controller"/>
+
+    <!--注解驱动特性,也可以使拦截器时定位到方法级别-->
+    <mvc:annotation-driven/>
+
+    <!--处理静态资源-->
+    <mvc:default-servlet-handler/>
+
+    <!--试图解析器,解析jsp-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+
+          p:prefix="WEB-INF/jsp/"
+          p:suffix=".jsp"/>
+
+</beans>

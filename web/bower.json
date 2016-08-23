@@ -1,0 +1,20 @@
+{
+  "name": "liyuze",
+  "homepage": "https://github.com/leeYuSky/junitHw1",
+  "authors": [
+    "liyuze"
+  ],
+  "description": "my test for bower",
+  "main": "",
+  "license": "Apache",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "startbootstrap-sb-admin-2": "^1.0.8"
+  }
+}
